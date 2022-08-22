@@ -1,0 +1,27 @@
+<div id="<%= dom_id pet_history %>">
+  <p>
+    <strong>Peso:</strong>
+    <%= pet_history.peso %>
+  </p>
+
+  <p>
+    <strong>Altura:</strong>
+    <%= pet_history.altura %>
+  </p>
+
+  <p>
+    <strong>Diagnostico:</strong>
+    <%= pet_history.diagnostico %>
+  </p>
+
+  <p>
+    <strong>Descripcion:</strong>
+    <%= pet_history.descripcion %>
+  </p>
+
+  <div>
+    <%= form.label :pet_id, style: "display: block" %>
+    <%= form.collection_select(:pet_id, Comuna.all, :id, :nombre, { :prompt => 'Select a Pet', :selected => @pet_history.pet_id }, { class: 'form-control' }) %>
+  </div>
+
+</div>

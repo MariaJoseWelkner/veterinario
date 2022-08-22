@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  peso: 1
+  altura: 1
+  diagnostico: MyText
+  descripcion: MyText
+  pet_id: one
+
+two:
+  peso: 1
+  altura: 1
+  diagnostico: MyText
+  descripcion: MyText
+  pet_id: two

@@ -1,0 +1,42 @@
+<%= form_with(model: pet_history) do |form| %>
+  <% if pet_history.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(pet_history.errors.count, "error") %> prohibited this pet_history from being saved:</h2>
+
+      <ul>
+        <% pet_history.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :peso, style: "display: block" %>
+    <%= form.number_field :peso %>
+  </div>
+
+  <div>
+    <%= form.label :altura, style: "display: block" %>
+    <%= form.number_field :altura %>
+  </div>
+
+  <div>
+    <%= form.label :diagnostico, style: "display: block" %>
+    <%= form.text_area :diagnostico %>
+  </div>
+
+  <div>
+    <%= form.label :descripcion, style: "display: block" %>
+    <%= form.text_area :descripcion %>
+  </div>
+
+  <div>
+    <%= form.label :pet_id_id, style: "display: block" %>
+    <%= form.text_field :pet_id_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
